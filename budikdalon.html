@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Budikdalon - KebunKita</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Gaya khusus untuk tabel Alat dan Bahan */
+      .table-alat {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+      }
+      .table-alat th,
+      .table-alat td {
+        border: 1px solid var(--border-color);
+        padding: 0.8rem;
+        text-align: left;
+      }
+      .table-alat th {
+        background-color: var(--secondary-color);
+        color: #fff;
+        font-weight: 600;
+      }
+      [data-theme="dark"] .table-alat th {
+        color: #121614;
+      }
+    </style>
+  </head>
+  <body data-article-id="budikdalon">
+    <!-- Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header>
+      <a href="index.html" class="logo">KebunKita</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li>
+          <a
+            href="budikdalon.html"
+            style="font-weight: 600; color: var(--accent-color)"
+            >Budikdalon</a
+          >
+        </li>
+        <li><a href="jahe.html">Tanaman Obat</a></li>
+        <li><a href="jurnal.html">Jurnal</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="btn-icon">◐</button>
+        <button id="menu-toggle" class="btn-icon menu-toggle">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Judul Artikel (Tanpa container header agar tidak berhimpitan) -->
+        <div style="padding-top: 2rem">
+          <span
+            class="tag"
+            style="display: block; text-align: center; margin-top: 1rem"
+            >Inovasi Budidaya</span
+          >
+          <h1 style="text-align: center; margin: 0.5rem 0; padding: 0 5%">
+            Pembahasan Program Budikdalon
+          </h1>
+
+          <!-- Ubah margin-bottom di sini menjadi 0.5rem -->
+          <p
+            style="
+              text-align: center;
+              color: var(--text-secondary);
+              margin-bottom: 0.5rem;
+              padding: 0 5%;
+            "
+          >
+            Integrasi Budi Daya Ikan Lele dan Tanaman Kangkung dalam Galon.
+          </p>
+
+          <!-- BARIS BARU UNTUK NAMA PENULIS -->
+          <div style="text-align: center; margin-bottom: 2.5rem">
+            <span
+              style="
+                background-color: var(--secondary-color);
+                color: #121614;
+                padding: 0.4rem 1rem;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+              "
+            >
+              ✎ Penulis: Aulia Elga Putri Mishali
+            </span>
+          </div>
+         
+         <!-- HIGHLIGHT POSTER EDUKASI -->
+<div style="margin: 0 auto 3rem; max-width: 90%; text-align: center;">
+    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1rem;">Poster Edukasi</p>
+    
+    <div style="position: relative; display: inline-block;">
+
+    <img 
+        src="assets/posters/budikdalon-poster.jpeg" 
+        alt="Poster Edukasi Budikdalon" 
+        class="poster-img" 
+        style="width: 100%; max-width: 400px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-radius: 16px; display: block;"
+    />
+
+    <button 
+        type="button"
+        class="poster-expand-btn"
+        aria-label="Perbesar poster"
+    >
+        🔍 Ketuk untuk memperbesar
+    </button>
+
+</div>
+    
+    <p style="font-size: 0.85rem; color: var(--text-secondary); font-style: italic; margin-top: 1rem;">
+        Poster Edukasi Sistem Budikdalon — Dibuat oleh Daniya Putri Kurniawan
+    </p>
+</div>
+        <!-- Gambar Hero -->
+        <img
+          src="assets/images/budikdalon.jpg"
+          alt="Ilustrasi Budikdalon"
+          class="article-hero-img"
+        />
+
+        <div class="article-body">
+          <h2>A. Mengenal Budikdalon</h2>
+          <h3>Apa itu budikdalon?</h3>
+          <p>
+            Budikdalon merupakan kegiatan budidaya ikan lele dan tanaman
+            kangkung dalam satu wadah berupa galon. Kegiatan ini dapat menjadi
+            alternatif pembelajaran budidaya dalam ruang terbatas sekaligus
+            mengenalkan pemeliharaan ikan dan tanaman secara bersamaan.
+          </p>
+          <p>
+            Melalui budikdalon, siswa dapat mempelajari kebutuhan dasar ikan
+            lele, proses pertumbuhan kangkung, pengelolaan air, dan pentingnya
+            menjaga kondisi wadah budidaya. Kegiatan ini juga dapat menjadi
+            sarana pembelajaran mengenai hubungan antara organisme dan
+            lingkungannya.
+          </p>
+          <p>
+            Sistem budikdalon yang digunakan perlu disesuaikan dengan rancangan
+            wadah dan metode pemeliharaan di sekolah. Penempatan ikan, tanaman,
+            media tanam, dan pengelolaan air harus memperhatikan kebutuhan
+            masing-masing organisme.
+          </p>
+
+          <h2>B. Mengenal Ikan Lele</h2>
+          <p>
+            Ikan lele merupakan salah satu jenis ikan air tawar yang banyak
+            dibudidayakan dan dikonsumsi masyarakat Indonesia. Ikan ini dikenal
+            memiliki kemampuan beradaptasi terhadap berbagai kondisi lingkungan,
+            tetapi tetap membutuhkan kualitas air dan pengelolaan pemeliharaan
+            yang sesuai agar dapat tumbuh dengan baik.
+          </p>
+          <p>
+            Dalam program budikdalon, ikan lele menjadi salah satu komponen
+            utama yang diperkenalkan kepada siswa.
+          </p>
+
+          <h3>Karakteristik Ikan Lele</h3>
+          <ul>
+            <li>Hidup di lingkungan air tawar.</li>
+            <li>Memiliki kumis atau sungut di sekitar mulut.</li>
+            <li>
+              Mengonsumsi pakan yang sesuai dengan kebutuhan pertumbuhannya.
+            </li>
+            <li>Memerlukan kualitas air yang mendukung kesehatannya.</li>
+            <li>
+              Membutuhkan ruang yang memadai sesuai ukuran dan jumlah ikan.
+            </li>
+          </ul>
+
+          <h3>Kebutuhan Dasar Ikan Lele</h3>
+          <ol>
+            <li>
+              <strong>Kualitas air:</strong> Air merupakan lingkungan utama bagi
+              ikan. Kondisi air perlu dipantau agar tidak terjadi penumpukan
+              kotoran dan sisa pakan yang dapat menurunkan kualitasnya.
+            </li>
+            <li>
+              <strong>Pemberian pakan:</strong> Ikan lele perlu mendapatkan
+              pakan yang sesuai dengan ukuran dan tahap pertumbuhannya. Jumlah
+              pakan harus diperhatikan agar kebutuhan ikan terpenuhi tanpa
+              menyebabkan penumpukan sisa pakan.
+            </li>
+            <li>
+              <strong>Kepadatan ikan:</strong> Jumlah ikan harus disesuaikan
+              dengan kapasitas wadah, ukuran ikan, dan kemampuan pengelolaan
+              kualitas air. Galon memiliki volume terbatas sehingga jumlah ikan
+              tidak boleh ditentukan hanya berdasarkan kemudahan memasukkan
+              benih.
+            </li>
+            <li>
+              <strong>Pemantauan kesehatan:</strong> Perhatikan perubahan
+              perilaku ikan, seperti berkurangnya aktivitas, kesulitan berenang,
+              atau penurunan nafsu makan. Perubahan tersebut dapat menjadi tanda
+              bahwa kondisi pemeliharaan perlu diperiksa.
+            </li>
+            <li>
+              <strong>Sirkulasi dan oksigen:</strong> Ketersediaan oksigen dan
+              pengelolaan air perlu disesuaikan dengan kepadatan ikan serta
+              rancangan sistem. Jangan menganggap ikan lele dapat hidup dengan
+              baik dalam segala kondisi air hanya karena memiliki kemampuan
+              mengambil oksigen dari udara.
+            </li>
+          </ol>
+
+          <h2>C. Mengenal Tanaman Kangkung</h2>
+          <p>
+            Kangkung merupakan sayuran yang banyak dikonsumsi masyarakat
+            Indonesia dan dapat dibudidayakan dengan metode yang relatif
+            sederhana. Tanaman ini cocok dijadikan objek pembelajaran karena
+            proses pertumbuhannya dapat diamati secara langsung, mulai dari
+            perkecambahan, pertumbuhan daun, hingga pemanenan.
+          </p>
+
+          <h3>Karakteristik Kangkung</h3>
+          <ul>
+            <li>Termasuk tanaman sayuran.</li>
+            <li>Membutuhkan air dan unsur hara untuk tumbuh.</li>
+            <li>Memerlukan cahaya yang sesuai.</li>
+            <li>Pertumbuhannya dapat diamati secara bertahap.</li>
+            <li>
+              Bagian daun dan batang mudanya umum dimanfaatkan sebagai bahan
+              pangan.
+            </li>
+          </ul>
+
+          <h3>Kebutuhan Dasar Kangkung</h3>
+          <ol>
+            <li>
+              <strong>Air:</strong> Air dibutuhkan dalam proses pertumbuhan
+              tanaman. Namun, kondisi akar dan media tanam juga harus
+              diperhatikan agar tanaman memperoleh lingkungan yang sesuai.
+            </li>
+            <li>
+              <strong>Cahaya matahari:</strong> Kangkung memerlukan cahaya untuk
+              melakukan fotosintesis. Penempatan tanaman harus mempertimbangkan
+              kebutuhan cahaya sesuai metode budidayanya.
+            </li>
+            <li>
+              <strong>Unsur hara:</strong> Tanaman membutuhkan unsur hara untuk
+              membentuk akar, batang, dan daun. Ketersediaan unsur hara harus
+              sesuai dengan metode budidaya yang digunakan.
+            </li>
+            <li>
+              <strong>Ruang tumbuh:</strong> Akar dan bagian tanaman harus
+              memiliki ruang yang cukup agar pertumbuhan tidak terganggu.
+            </li>
+          </ol>
+
+          <h2>D. Hubungan Ikan Lele dan Kangkung dalam Budikdalon</h2>
+          <p>
+            Dalam budikdalon, ikan lele dan kangkung ditempatkan dalam satu
+            sistem budidaya menggunakan galon. Keduanya memiliki kebutuhan yang
+            berbeda. Ikan memerlukan air dengan kondisi yang sesuai untuk
+            kehidupan akuatik, sedangkan tanaman membutuhkan air, cahaya, dan
+            unsur hara untuk pertumbuhan.
+          </p>
+          <p>
+            Pada sistem tertentu, sisa metabolisme ikan dapat menjadi salah satu
+            sumber unsur hara bagi tanaman setelah mengalami proses yang sesuai.
+            Tanaman juga dapat memanfaatkan sebagian unsur hara yang tersedia di
+            lingkungan perakarannya.
+          </p>
+          <p>
+            Namun, hubungan tersebut tidak otomatis membuat air selalu bersih
+            atau kebutuhan nutrisi tanaman selalu terpenuhi. Efektivitasnya
+            bergantung pada rancangan sistem, kepadatan ikan, pakan, kondisi
+            akar, dan pengelolaan air. Oleh karena itu, budikdalon membutuhkan
+            pemantauan dan perawatan yang tepat agar ikan dan tanaman dapat
+            tumbuh dalam kondisi yang sesuai.
+          </p>
+
+          <h2>E. Alat dan Bahan Budikdalon</h2>
+          <table class="table-alat">
+            <thead>
+              <tr>
+                <th>Alat atau Bahan</th>
+                <th>Fungsi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Galon</td>
+                <td>Sebagai wadah utama budidaya</td>
+              </tr>
+              <tr>
+                <td>Benih ikan lele</td>
+                <td>Komponen budidaya ikan</td>
+              </tr>
+              <tr>
+                <td>Benih kangkung</td>
+                <td>Bahan untuk menumbuhkan tanaman</td>
+              </tr>
+              <tr>
+                <td>Air yang sesuai</td>
+                <td>Media hidup ikan dan bagian dari sistem budidaya</td>
+              </tr>
+              <tr>
+                <td>Penyangga tanaman</td>
+                <td>Membantu menempatkan tanaman sesuai rancangan</td>
+              </tr>
+              <tr>
+                <td>Media tanam (jika perlu)</td>
+                <td>Mendukung pertumbuhan akar</td>
+              </tr>
+              <tr>
+                <td>Pakan ikan</td>
+                <td>Memenuhi kebutuhan nutrisi ikan</td>
+              </tr>
+              <tr>
+                <td>Alat pemeriksaan air</td>
+                <td>Membantu memantau kondisi air (jika tersedia)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>F. Langkah-Langkah Budikdalon</h2>
+          <ol>
+            <li>
+              <strong>Persiapan Wadah:</strong> Siapkan galon yang akan
+              digunakan sebagai wadah budidaya. Pastikan galon bersih, tidak
+              mengandung residu berbahaya, dan memiliki rancangan yang sesuai
+              untuk pemeliharaan ikan serta penempatan tanaman.
+            </li>
+            <li>
+              <strong>Persiapan Air:</strong> Gunakan air yang sesuai untuk
+              pemeliharaan ikan lele. Kondisi air perlu diperhatikan, termasuk
+              suhu, oksigen terlarut, dan parameter kualitas air lain yang
+              relevan.
+            </li>
+            <li>
+              <strong>Persiapan Tanaman Kangkung:</strong> Siapkan benih
+              kangkung dan media atau penyangga tanaman sesuai rancangan sistem.
+              Pastikan akar memiliki kondisi yang sesuai untuk tumbuh dan
+              memperoleh kebutuhan dasarnya.
+            </li>
+            <li>
+              <strong>Penempatan Ikan dan Tanaman:</strong> Masukkan ikan dan
+              tempatkan tanaman sesuai prosedur sistem budikdalon yang
+              digunakan. Jumlah ikan harus mempertimbangkan volume wadah dan
+              kemampuan menjaga kualitas air. Hindari memasukkan terlalu banyak
+              ikan ke dalam galon.
+            </li>
+            <li>
+              <strong>Perawatan Rutin:</strong> Lakukan perawatan secara
+              berkala, meliputi pemberian pakan, pemantauan kondisi ikan,
+              pemeriksaan air, serta pengamatan pertumbuhan kangkung.
+            </li>
+            <li>
+              <strong>Pemantauan Perkembangan:</strong> Catat perubahan yang
+              terlihat pada ikan dan tanaman. Dokumentasi dapat dilakukan
+              melalui foto dan jurnal pengamatan.
+            </li>
+            <li>
+              <strong>Pemanenan:</strong> Pemanenan kangkung atau ikan dilakukan
+              berdasarkan kondisi pertumbuhan dan kesiapan hasil budidaya.
+              Proses pemanenan harus mengikuti kebutuhan masing-masing organisme
+              dan rancangan sistem.
+            </li>
+          </ol>
+
+          <h2>G. Perawatan Budikdalon</h2>
+          <p>
+            Perawatan merupakan bagian penting dalam keberhasilan budikdalon.
+            Beberapa kegiatan perawatan yang perlu diperhatikan meliputi:
+          </p>
+          <ul>
+            <li>Memberikan pakan sesuai kebutuhan ikan.</li>
+            <li>Memantau kualitas air secara berkala.</li>
+            <li>Memperhatikan jumlah ikan dalam wadah.</li>
+            <li>Mengamati perubahan perilaku dan kondisi ikan.</li>
+            <li>Memastikan tanaman memperoleh cahaya yang sesuai.</li>
+            <li>Memantau kondisi akar dan daun kangkung.</li>
+            <li>
+              Membersihkan komponen yang diperlukan tanpa mengganggu sistem.
+            </li>
+            <li>Mencatat setiap perubahan dan kendala yang muncul.</li>
+          </ul>
+
+          <h3>Permasalahan yang Mungkin Terjadi</h3>
+          <ul>
+            <li>
+              <strong>Air menjadi keruh atau berbau:</strong> Kondisi ini dapat
+              berkaitan dengan penumpukan sisa pakan, kotoran, atau perubahan
+              kualitas air. Penyebabnya perlu diperiksa dan ditangani dengan
+              cara yang sesuai untuk menjaga keselamatan ikan.
+            </li>
+            <li>
+              <strong>Ikan terlihat kurang aktif:</strong> Periksa kondisi air,
+              suhu, kepadatan ikan, dan pemberian pakan. Jangan langsung
+              menyimpulkan penyebabnya tanpa melakukan pengamatan.
+            </li>
+            <li>
+              <strong>Daun kangkung menguning:</strong> Periksa kebutuhan
+              cahaya, kondisi akar, ketersediaan unsur hara, dan kondisi air.
+              Daun menguning dapat disebabkan oleh berbagai faktor sehingga
+              perlu diamati lebih lanjut.
+            </li>
+            <li>
+              <strong>Pertumbuhan tanaman lambat:</strong> Periksa kondisi
+              media, pencahayaan, ruang tumbuh, dan ketersediaan unsur hara.
+              Perubahan perawatan harus mempertimbangkan dampaknya terhadap
+              ikan.
+            </li>
+          </ul>
+
+          <h2>H. Manfaat Budikdalon</h2>
+          <p>Budikdalon memiliki beberapa manfaat sebagai kegiatan edukasi:</p>
+          <ol>
+            <li>
+              Mengenalkan budidaya ikan dan tanaman dalam wadah sederhana.
+            </li>
+            <li>
+              Memberikan pengalaman belajar mengenai pertumbuhan organisme.
+            </li>
+            <li>
+              Melatih keterampilan mengamati dan merawat ikan serta tanaman.
+            </li>
+            <li>Mengenalkan pemanfaatan ruang yang terbatas.</li>
+            <li>Menjadi media pembelajaran tentang produksi pangan.</li>
+            <li>
+              Menumbuhkan kesadaran mengenai pentingnya pengelolaan air dan
+              lingkungan.
+            </li>
+            <li>Mengembangkan kebiasaan mendokumentasikan proses budidaya.</li>
+          </ol>
+
+          <h2>I. Budikdalon sebagai Media Pembelajaran</h2>
+          <p>
+            Kegiatan budikdalon dapat dikaitkan dengan berbagai bidang
+            pembelajaran:
+          </p>
+          <ul>
+            <li>
+              <strong>Biologi:</strong> Mengenal karakteristik dan kebutuhan
+              hidup ikan serta tanaman.
+            </li>
+            <li>
+              <strong>Lingkungan:</strong> Memahami pentingnya kualitas air dan
+              pemeliharaan lingkungan.
+            </li>
+            <li>
+              <strong>Ketahanan pangan:</strong> Mengenal proses produksi ikan
+              dan sayuran.
+            </li>
+            <li>
+              <strong>Teknologi digital:</strong> Mencatat dan mendokumentasikan
+              perkembangan budidaya.
+            </li>
+            <li>
+              <strong>Keterampilan:</strong> Melatih ketelitian, tanggung jawab,
+              dan konsistensi dalam perawatan.
+            </li>
+          </ul>
+
+          <!-- Media Section (Audio & Poster) -->
+          <div class="media-container">
+            <h3>Audio Pembelajaran</h3>
+            <p
+              style="
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+                color: var(--text-secondary);
+              "
+            >
+              Dengarkan audio singkat program Budikdalon.
+            </p>
+            <audio controls>
+              <source src="assets/audio/budikdalon.mp3" type="audio/mpeg" />
+              Browser Anda tidak mendukung pemutar audio.
+            </audio>
+          </div>
+
+          <!-- ========================================== -->
+                <!-- KUIS INTERAKTIF -->
+                <!-- ========================================== -->
+                
+                <hr style="margin: 4rem 0 2rem; border: none; border-top: 1px solid var(--border-color);">
+                
+                <!-- Kuis Interaktif -->
+                <div class="quiz-container">
+                    <h2 style="text-align: center; margin-bottom: 0.5rem;">Kuis Pemahaman Budikdalon</h2>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2.5rem;">Uji pemahamanmu setelah membaca materi di atas!</p>
+                    
+                    <!-- Soal 1 -->
+                    <div class="quiz-question-box" id="quiz-1">
+                        <p class="quiz-question">1. Apa yang dimaksud dengan sistem Budikdalon?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">A. Menanam sayuran di lahan persawahan sekolah</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, true)">B. Budidaya ikan lele dan tanaman kangkung dalam galon bekas</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">C. Memelihara ikan hias di dalam akuarium kaca</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+
+                    <!-- Soal 2 -->
+                    <div class="quiz-question-box" id="quiz-2">
+                        <p class="quiz-question">2. Mengapa kita tidak boleh memasukkan ikan terlalu banyak ke dalam satu galon?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">A. Agar wadah galon tidak mudah retak dan pecah</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, true)">B. Karena kapasitas air dan oksigen akan cepat menurun</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">C. Karena ikan lele suka hidup menyendiri</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+
+                    <!-- Soal 3 -->
+                    <div class="quiz-question-box" id="quiz-3">
+                        <p class="quiz-question">3. Dalam sistem ini, dari mana tanaman kangkung mendapatkan unsur hara utamanya?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-btn" onclick="checkAnswer(this, true)">A. Dari sisa metabolisme dan kotoran ikan yang terurai di air</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">B. Dari pupuk kimia yang diberikan setiap pagi</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">C. Murni dari air hujan yang ditampung di dalam galon</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+
+                    <!-- Soal 4 -->
+                    <div class="quiz-question-box" id="quiz-4">
+                        <p class="quiz-question">4. Apa tindakan yang tepat jika air di dalam galon sudah keruh pekat dan berbau busuk menyengat?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">A. Menjemur galon di bawah terik matahari secara langsung</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">B. Menambahkan lebih banyak ikan agar kotoran cepat habis dimakan</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, true)">C. Segera melakukan pergantian air agar ikan tidak keracunan</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+
+                    <!-- Soal 5 -->
+                    <div class="quiz-question-box" id="quiz-5">
+                        <p class="quiz-question">5. Jika ikan terlihat kurang aktif berenang, langkah pertama apa yang paling tepat dilakukan?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-btn" onclick="checkAnswer(this, true)">A. Memeriksa kondisi air, suhu, kepadatan, dan sisa pakan</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">B. Langsung memanen ikan lele karena sudah siap konsumsi</button>
+                            <button class="quiz-btn" onclick="checkAnswer(this, false)">C. Mencabut dan mengganti kangkung dengan tanaman lain</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+
+                </div>
+                <!-- ========================================== -->
+          <!-- Tombol Navigasi Bawah (Dengan Flex-Wrap agar responsif) -->
+          <div
+            style="
+              margin-top: 3rem;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1.5rem;
+              justify-content: center;
+              align-items: center;
+              border-top: 1px solid var(--border-color);
+              padding-top: 1.5rem;
+              text-align: center;
+            "
+          >
+            <button id="mark-read-btn" class="btn btn-primary">
+              Tandai Selesai Dibaca
+            </button>
+            <a
+              href="jahe.html"
+              style="color: var(--accent-color); font-weight: 500"
+              >Baca Tanaman Obat &rarr;</a
+            >
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Modal Poster -->
+    <div id="poster-modal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modal-img" alt="Poster Edukasi" />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="logo" style="color: #fff; margin-bottom: 1rem">KebunKita</div>
+      <p>Proyek Ketahanan Pangan &copy; 2026 - SMPIT Ibadurrahman</p>
+      <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7)">
+        Dikembangkan oleh <strong>Riskiah Sri Utami</strong>
+      </p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

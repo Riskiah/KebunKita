@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KebunKita | Budikdalon & Tanaman Obat</title>
+    <meta
+      name="description"
+      content="Platform edukasi digital Ketahanan Pangan (Budikdalon & Tanaman Obat) di SMPIT Ibadurrahman."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">KebunKita</div>
+      <ul class="nav-links">
+        <a
+          href="index.html"
+          style="font-weight: 600; color: var(--accent-color)"
+          >Beranda</a
+        >
+        <li><a href="budikdalon.html">Budikdalon</a></li>
+        <li><a href="jahe.html">Tanaman Obat</a></li>
+        <li><a href="jurnal.html">Jurnal</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+          ◐
+        </button>
+        <button id="menu-toggle" class="btn-icon menu-toggle" aria-label="Menu">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Menanam Hari Ini, Menuai Manfaat di Masa Depan.</h1>
+
+        <p style="margin-bottom: 1rem">
+          Selamat datang di <strong>KebunKita Digital</strong>, platform edukasi
+          ketahanan pangan sekolah. Kami memadukan teknologi dengan praktik
+          budidaya tanaman herbal dan inovasi <strong>Budikdalon</strong> (lele
+          & kangkung dalam galon).
+        </p>
+
+        <p style="margin-bottom: 2rem; font-weight: 500">
+          Mari manfaatkan barang bekas dan mulai langkah kecil menuju sekolah
+          yang hijau, sehat, dan mandiri pangan!
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#artikel" class="btn btn-primary">Jelajahi Artikel</a>
+          <a
+            href="#"
+            class="btn btn-accent link-dashboard"
+            target="_blank"
+            rel="noopener"
+            >Pantau Budidaya</a
+          >
+        </div>
+      </section>
+
+      <section class="section-container" id="program">
+        <h2 class="section-title">Program Utama</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div
+              class="card-img"
+              style="
+                background-image: url(&quot;assets/images/budikdalon.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="card-content">
+              <span class="tag">Inovasi</span>
+              <h3 class="card-title">BUDIKDALON</h3>
+              <p class="card-desc">
+                Sistem budidaya terpadu ikan lele dan tanaman kangkung
+                menggunakan galon bekas sebagai wadah.
+              </p>
+              <a
+                href="budikdalon.html"
+                class="btn btn-primary"
+                style="text-align: center"
+                >Pelajari Budikdalon</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="card-img"
+              style="
+                background-image: url(&quot;assets/images/tanaman-herbal.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="card-content">
+              <span class="tag">Herbal</span>
+              <h3 class="card-title">Tanaman Obat di Sekolah</h3>
+              <p class="card-desc">
+                Mengenal dan membudidayakan rimpang kaya manfaat seperti jahe,
+                lengkuas, dan kunyit.
+              </p>
+              <a
+                href="jahe.html"
+                class="btn btn-primary"
+                style="text-align: center"
+                >Lihat Tanaman Obat</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-container" id="artikel">
+        <h2 class="section-title">Artikel Pilihan</h2>
+
+        <div class="controls">
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="budikdalon">
+              Budikdalon
+            </button>
+            <button class="filter-btn" data-filter="toga">Tanaman Obat</button>
+          </div>
+          <input
+            type="text"
+            id="search-input"
+            class="search-bar"
+            placeholder="Cari artikel..."
+          />
+        </div>
+
+        <div class="grid-3">
+          <a
+            href="budikdalon.html"
+            class="card article-card"
+            data-title="Mengenal sistem budikdalon"
+            data-category="budikdalon"
+          >
+            <div class="card-content">
+              <span class="tag">Budikdalon</span>
+              <h3 class="card-title">Mengenal Sistem Budikdalon</h3>
+              <p class="card-desc">
+                Panduan komprehensif tentang integrasi kangkung dan lele.
+              </p>
+            </div>
+          </a>
+          <a
+            href="jahe.html"
+            class="card article-card"
+            data-title="Mengenal jahe rimpang hangat"
+            data-category="toga"
+          >
+            <div class="card-content">
+              <span class="tag">Tanaman Obat</span>
+              <h3 class="card-title">Jahe: Rimpang Hangat Kaya Manfaat</h3>
+              <p class="card-desc">
+                Cara menanam dan merawat jahe di pekarangan sekolah.
+              </p>
+            </div>
+          </a>
+          <a
+            href="kunyit.html"
+            class="card article-card"
+            data-title="Mengenal kunyit sang pewarna alami"
+            data-category="toga"
+          >
+            <div class="card-content">
+              <span class="tag">Tanaman Obat</span>
+              <h3 class="card-title">Kunyit: Sang Pewarna Alami</h3>
+              <p class="card-desc">
+                Mengenal morfologi dan khasiat rimpang kunyit.
+              </p>
+            </div>
+          </a>
+          <a
+            href="lengkuas.html"
+            class="card article-card"
+            data-title="Mengenal lengkuas bumbu dapur multiguna"
+            data-category="toga"
+          >
+            <div class="card-content">
+              <span class="tag">Tanaman Obat</span>
+              <h3 class="card-title">Lengkuas: Bumbu Dapur Multiguna</h3>
+              <p class="card-desc">
+                Panduan budidaya lengkuas yang mudah diikuti.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="section-container"
+        style="
+          text-align: center;
+          background: var(--secondary-color);
+          color: #fff;
+          border-radius: var(--radius);
+          padding: 3rem 2rem;
+        "
+      >
+        <h2>Mari Berpartisipasi</h2>
+        <p style="margin: 1rem 0 2rem">
+          Catat dan dokumentasikan perkembangan tanaman kelompokmu secara rutin.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="#"
+            class="btn btn-primary link-gform"
+            target="_blank"
+            rel="noopener"
+            style="background: #fff; color: var(--primary-color)"
+            >Input Perkembangan</a
+          >
+          <a
+            href="jurnal.html"
+            class="btn"
+            style="border: 1px solid #fff; color: #fff"
+            >Lihat Jurnal</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="logo" style="color: #fff; margin-bottom: 1rem">KebunKita</div>
+      <p>Proyek Ketahanan Pangan &copy; 2026 - SMPIT Ibadurrahman</p>
+      <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7)">
+        Dikembangkan oleh <strong>Riskiah Sri Utami</strong>
+      </p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

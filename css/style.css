@@ -1,0 +1,815 @@
+/* css/style.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+:root {
+  /* Light Mode (Botanical Editorial) */
+  --bg-color: #fdfbf7;
+  --text-primary: #2c352d;
+  --text-secondary: #5a6b5c;
+  --primary-color: #1a3626;
+  --secondary-color: #8ca38b;
+  --accent-color: #c05a45;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121614;
+  --text-primary: #ffffff; /* Teks utama jadi putih bersih */
+  --text-secondary: #b9c7ba; /* Teks paragraf diperterang agar mudah dibaca */
+  --primary-color: #a3c9a8; /* Judul menjadi hijau pastel terang */
+  --secondary-color: #a3c9a8; /* Label tag menjadi terang */
+  --accent-color: #e5806a; /* Warna aksen terracotta diperterang */
+  --card-bg: #1b211e;
+  --border-color: #2d3a30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: var(--transition);
+  -webkit-font-smoothing: antialiased;
+  animation: fadeInPage 0.6s ease-out forwards;
+}
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Efek animasi keluar saat tombol diklik (dipicu oleh JavaScript) */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   MOBILE-FIRST DEFAULT STYLES (Layar HP)
+========================================= */
+
+/* Navbar */
+header {
+  background-color: var(--bg-color);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Navigasi Mobile Bawaan (Disembunyikan) */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 1rem 5%;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links.active {
+  display: flex;
+}
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.nav-controls {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+.menu-toggle {
+  display: block;
+} /* Ditampilkan di mobile */
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 5%;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  width: 100%; /* Lebar penuh di mobile */
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: var(--text-primary);
+}
+.btn-accent {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.btn-accent:hover {
+  opacity: 0.9;
+}
+
+/* Layout & Cards (Satu Kolom di Mobile) */
+.section-container {
+  padding: 3rem 5%;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-2,
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 kolom bawaan */
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #eee;
+}
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+.card-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Filters & Search */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.search-bar {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  outline: none;
+  width: 100%;
+}
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+} /* Bisa di-scroll horizontal jika filter banyak */
+.filters::-webkit-scrollbar {
+  height: 4px;
+}
+.filters::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+.filter-btn.active {
+  background: var(--secondary-color);
+  color: #fff;
+  border-color: var(--secondary-color);
+}
+
+/* Article Content */
+.article-header {
+  text-align: center;
+  padding: 2rem 5% 1.5rem;
+}
+.article-header h1 {
+  font-size: 1.8rem;
+  margin: 0.8rem 0;
+}
+.article-hero-img {
+  width: 90%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+.article-body {
+  padding: 0 5% 3rem;
+  font-size: 1rem;
+}
+.article-body h2 {
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem;
+}
+.article-body p {
+  margin-bottom: 1rem;
+}
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+/* Media, Audio & Poster */
+.media-container {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+audio {
+  width: 100%;
+  outline: none;
+  margin-top: 0.5rem;
+  height: 40px;
+}
+.poster-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--secondary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   MODAL POSTER - TENGAH VIEWPORT
+========================================= */
+
+#poster-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#poster-modal.active {
+  display: flex;
+}
+
+#poster-modal .modal-content {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 90vh;
+  max-height: 90dvh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: posterZoom 0.25s ease;
+}
+
+#poster-modal .close-modal {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 100000;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  font-size: 35px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#poster-modal .close-modal:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes posterZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  #poster-modal {
+    padding: 10px;
+  }
+
+  #poster-modal .modal-content {
+    max-width: 94vw;
+    max-height: 82vh;
+    max-height: 82dvh;
+  }
+
+  #poster-modal .close-modal {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+/* TAMBAHAN TERBARU */
+/* Tombol perbesar poster - posisi bawah */
+.poster-expand-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: none;
+  background: rgba(18, 22, 20, 0.78);
+  color: #fff;
+
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+
+  font-size: 0.9rem;
+  font-family: inherit;
+  white-space: nowrap;
+
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.poster-expand-btn:hover {
+  background: rgba(18, 22, 20, 0.95);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.poster-expand-btn:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: #fdfbf7;
+  padding: 2.5rem 5%;
+  text-align: center;
+  margin-top: 3rem;
+}
+footer p {
+  opacity: 0.8;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* Utility */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+.read {
+  background-color: var(--secondary-color) !important;
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* =========================================
+   TABLET STYLES (Min-width: 768px)
+========================================= */
+@media (min-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding: 4rem 5%;
+    max-width: 800px;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .btn {
+    width: auto;
+  } /* Kembalikan lebar tombol sesuai isi teks */
+
+  .section-container {
+    padding: 4rem 5%;
+    max-width: 1000px;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  } /* 2 kolom di tablet */
+
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-bar {
+    max-width: 300px;
+  }
+
+  .article-header {
+    padding: 3rem 5% 2rem;
+  }
+  .article-header h1 {
+    font-size: 2.5rem;
+  }
+  .article-hero-img {
+    height: 350px;
+    max-width: 800px;
+  }
+  .article-body {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  .poster-placeholder {
+    height: 300px;
+  }
+}
+
+/* =========================================
+   DESKTOP STYLES (Min-width: 1024px)
+========================================= */
+@media (min-width: 1024px) {
+  header {
+    padding: 1rem 5%;
+    max-width: 100%;
+    border-bottom: none;
+  }
+
+  /* Tampilkan Navigasi Desktop, Sembunyikan Toggle */
+  .menu-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    width: auto;
+    gap: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .section-container {
+    max-width: 1200px;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  } /* 3 kolom di desktop */
+
+  .article-hero-img {
+    height: 450px;
+  }
+}
+/* =========================================
+   PERBAIKAN KONTRAS DARK MODE
+========================================= */
+/* 1. Teks tombol menjadi gelap saat mode gelap agar mudah dibaca */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-accent {
+  color: #121614 !important;
+  font-weight: 600;
+}
+
+/* 2. Memperbaiki kotak "Mari Berpartisipasi" dan "Thumbnail Gambar" di mode gelap */
+[data-theme="dark"]
+  .section-container[style*="background: var(--secondary-color)"],
+[data-theme="dark"]
+  .article-hero-img[style*="background: var(--secondary-color)"] {
+  background-color: #1b211e !important;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .section-container p {
+  color: var(--text-secondary) !important;
+}
+/* 3. Teks Footer menjadi gelap di Dark Mode agar kontras dengan background terang */
+[data-theme="dark"] footer,
+[data-theme="dark"] footer .logo,
+[data-theme="dark"] footer p {
+  color: #121614 !important;
+}
+
+[data-theme="dark"] footer p[style*="rgba"] {
+  color: rgba(
+    18,
+    22,
+    20,
+    0.8
+  ) !important; /* Untuk tulisan "Dikembangkan oleh" */
+}
+/* =========================================
+   FLASH CARDS & KUIS INTERAKTIF
+========================================= */
+
+/* Flash Card */
+.flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.flashcard {
+  background-color: transparent;
+  width: 100%;
+  height: 150px;
+  perspective: 1000px; /* Efek 3D */
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.flashcard-front {
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.flashcard-back {
+  background-color: var(--secondary-color);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+}
+
+/* Kuis */
+.quiz-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.quiz-question-box {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+.quiz-question-box:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.quiz-question {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-btn {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.quiz-btn:hover {
+  border-color: var(--secondary-color);
+}
+
+.quiz-btn.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+.quiz-btn.wrong {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+/* Dark mode adjustment for quiz buttons */
+[data-theme="dark"] .quiz-btn {
+  background: #121614;
+  color: #fff;
+}
+[data-theme="dark"] .quiz-btn.correct {
+  background: #1e4225;
+  border-color: #28a745;
+  color: #d4edda;
+}
+[data-theme="dark"] .quiz-btn.wrong {
+  background: #4a191e;
+  border-color: #dc3545;
+  color: #f8d7da;
+}
+
+.quiz-feedback {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
